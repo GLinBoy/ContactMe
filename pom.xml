@@ -53,6 +53,7 @@
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus.platform.version}</version>
+        <extensions>true</extensions>
         <executions>
           <execution>
             <goals>
@@ -67,7 +68,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${compiler-plugin.version}</version>
         <configuration>
-          <parameters>${maven.compiler.parameters}</parameters>
+          <compilerArgs>
+            <arg>-parameters</arg>
+          </compilerArgs>
         </configuration>
       </plugin>
       <plugin>
